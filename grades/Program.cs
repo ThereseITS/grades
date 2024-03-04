@@ -77,7 +77,7 @@
             {
                 if (counts[i] > 0)
                 {
-                    Console.WriteLine($"{grades[i]}  {counts[i]}  {cumulativeMarks[i] / counts[i]}");
+                    Console.WriteLine($"{grades[i]}  {counts[i]}  {(int) Math.Round((double)cumulativeMarks[i] / (double) counts[i])}");
                 }
                 else
                 {
@@ -88,7 +88,7 @@
                 cumulativeMark += cumulativeMarks[i];
             }
           
-                average = (int)((double)cumulativeMark / (double)totalStudents);
+                average = (int)Math.Round((double)cumulativeMark / (double)totalStudents);
             
         
             Console.WriteLine($"{average}  {totalStudents}");
